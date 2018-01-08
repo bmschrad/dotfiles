@@ -38,6 +38,12 @@ Plug 'Yggdroot/indentLine'
 " Using a non-master branch
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
+" Ctrl-p
+Plug 'ctrlpvim/ctrlp.vim'
+
+" Number Toggle
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
 " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
 Plug 'fatih/vim-go', { 'tag': '*' }
 
@@ -122,6 +128,9 @@ map <C-m> :TagbarToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+" Numbertoggle
+:nnoremap <silent> <C-l> :set relativenumber!<cr>
+
 " Visual Indenting
 let g:indentLine_setColors = 0
 "call clearmatches()
@@ -130,4 +139,11 @@ let g:indentLine_setColors = 0
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=236
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=256
 "let indent_guides_color_change_percent = 10
-"let indent_guides_guide_size = 0
+"
+" ESCAPE KEY REMAPS "
+"during insert, kj escapes, `^ is so that the cursor doesn't move
+inoremap kj <Esc>`^
+"during insert, lkj escapes and saves
+inoremap lkj <Esc>`^:w<CR>
+"during insert, lkj escapes and saves and QUITS
+inoremap ;lkj <Esc>:wq<CR>let indent_guides_guide_size = 0
