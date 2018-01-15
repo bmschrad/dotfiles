@@ -140,6 +140,8 @@ let g:indentLine_setColors = 0
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=256
 "let indent_guides_color_change_percent = 10
 "
+" F-Key REMAPS
+map <F6> :w<CR>:!node %<CR>
 " ESCAPE KEY REMAPS "
 "during insert, kj escapes, `^ is so that the cursor doesn't move
 inoremap kj <Esc>`^
