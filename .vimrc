@@ -131,6 +131,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Numbertoggle
 :nnoremap <silent> <C-l> :set relativenumber!<cr>
 
+" CtrlP
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
 " Visual Indenting
 let g:indentLine_setColors = 0
 "call clearmatches()
