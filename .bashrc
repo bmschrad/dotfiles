@@ -92,6 +92,14 @@ alias ll='ls -lA'
 #alias la='ls -A'
 #alias l='ls -CF'
 
+# quick directory movement
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# go to the last directory you were in
+alias back='cd $OLDPWD'
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
