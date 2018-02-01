@@ -89,8 +89,8 @@ fi
 
 # some more ls aliases
 alias ll='ls -lA'
-#alias la='ls -A'
-#alias l='ls -CF'
+alias la='ls -A'
+alias l='ls -CF'
 
 # quick directory movement
 alias ..='cd ..'
@@ -99,6 +99,8 @@ alias ....='cd ../../..'
 
 # go to the last directory you were in
 alias back='cd $OLDPWD'
+
+alias wttr='curl wttr.in/dallas'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
