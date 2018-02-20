@@ -120,3 +120,6 @@ POWERLINE_BASH_SELECT=1
 . /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh
 
 PATH=/home/brandon/Temp:$PATH
+ 
+# Custom envoronment variables
+export EDITOR='vim'
