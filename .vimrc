@@ -31,6 +31,7 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
@@ -155,7 +156,7 @@ inoremap kj <Esc>`^
 "during insert, lkj escapes and saves
 inoremap lkj <Esc>`^:w<CR>
 "during insert, lkj escapes and saves and QUITS
-inoremap ;lkj <Esc>:wq<CR>let indent_guides_guide_size = 0
+inoremap ;lkj <Esc>:wq<CR>
 
 " LEADERKEY MAPPINGS {{{
 let mapleader = ","
@@ -174,5 +175,7 @@ nnoremap <leader>p :bp<cr>
 " VIMRC
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+" Search and Replace
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 " }}}
 " }}}
