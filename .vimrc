@@ -23,11 +23,15 @@ Plug 'junegunn/vim-easy-align'
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
+" Rainbow Parentheses
+Plug 'junegunn/rainbow_parentheses.vim'
+
 " Multiple Plug commands can be written in a single line using | separators
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
@@ -143,6 +147,7 @@ let g:indentLine_setColors = 0
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=256
 "let indent_guides_color_change_percent = 10
 "
+" REMAP Section {{{
 " F-Key REMAPS
 map <F6> :w<CR>:!node %<CR>
 " ESCAPE KEY REMAPS "
@@ -151,4 +156,26 @@ inoremap kj <Esc>`^
 "during insert, lkj escapes and saves
 inoremap lkj <Esc>`^:w<CR>
 "during insert, lkj escapes and saves and QUITS
-inoremap ;lkj <Esc>:wq<CR>let indent_guides_guide_size = 0
+inoremap ;lkj <Esc>:wq<CR>
+
+" LEADERKEY MAPPINGS {{{
+let mapleader = ","
+
+" WINDOW movement remaps
+nnoremap <leader>x <C-w>x
+nnoremap <leader>w <C-w>w
+nnoremap <leader>o <C-w>o
+"nnoremap <leader>| <C-w>|
+"nnoremap <leader>_ <C-w>_
+nnoremap <leader>= <C-w>=
+
+" BUFFER movement remaps
+nnoremap <leader>n :bn<cr>
+nnoremap <leader>p :bp<cr>
+" VIMRC
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+" Search and Replace
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+" }}}
+" }}}
