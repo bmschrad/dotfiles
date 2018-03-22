@@ -31,6 +31,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
+" Increment Search
+Plug 'haya14busa/incsearch.vim'
+
 " Visual Indenting
 "Plug 'nathanaelkane/vim-indent-guides'
 Plug 'Yggdroot/indentLine'
@@ -152,3 +155,17 @@ inoremap kj <Esc>`^
 inoremap lkj <Esc>`^:w<CR>
 "during insert, lkj escapes and saves and QUITS
 inoremap ;lkj <Esc>:wq<CR>let indent_guides_guide_size = 0
+
+" Increment Search Plugin settings
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+" :h g:incsearch#auto_nohlsearch
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
