@@ -14,6 +14,9 @@ call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
 
+" AG Plugin
+Plug 'epmatsw/ag.vim'
+
 " Autogenerate Ctags on save
 Plug 'craigemery/vim-autotag'
 
