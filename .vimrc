@@ -91,8 +91,8 @@ set number
 set ruler
 
 " Set Proper Tabs
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set smarttab
 set expandtab
 
@@ -163,6 +163,10 @@ inoremap kj <Esc>`^
 inoremap lkj <Esc>`^:w<CR>
 "during insert, lkj escapes and saves and QUITS
 inoremap ;lkj <Esc>:wq<CR>
+
+" ALE plugin settings
+let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
+let g:ale_fix_on_save = 1
 
 " Increment Search Plugin settings
 map /  <Plug>(incsearch-forward)
