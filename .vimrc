@@ -27,7 +27,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
 " Rainbow Parentheses
-Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'kien/rainbow_parentheses.vim'
 
 " Multiple Plug commands can be written in a single line using | separators
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -194,9 +194,12 @@ nnoremap <leader>o <C-w>o
 "nnoremap <leader>_ <C-w>_
 nnoremap <leader>= <C-w>=
 
-" BUFFER movement remaps
+" BUFFER management
+noremap <leader>b :CtrlPBuffer<cr>
+noremap <silent> <leader>d :bp\|bd #<CR>
 nnoremap <leader>n :bn<cr>
 nnoremap <leader>p :bp<cr>
+
 " VIMRC
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>

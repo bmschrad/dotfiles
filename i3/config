@@ -48,6 +48,9 @@ bindsym $mod+d exec dmenu_run
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+bindsym $mod+m exec i3-msg workspace 9; exec st -t matterhorn -e matterhorn
+bindsym $mod+c exec google-chrome
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
