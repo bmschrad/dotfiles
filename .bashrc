@@ -130,6 +130,9 @@ POWERLINE_BASH_SELECT=1
 
 PATH=/home/brandon/Temp:$PATH
 PATH=$PATH:/home/brandon/.local/bin
+PATH=$PATH:/home/brandon/scripts/docker
  
 # Custom envoronment variables
 export EDITOR='vim'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
